@@ -40,7 +40,7 @@ window.onload = function () {
     context.fillText('Count: ' + count, 20, 30)
 
     if (y <= 350) {
-      speed += 7000 * timePassed
+      speed += 10000 * timePassed
       y += speed * timePassed
       speed = 25
     }
