@@ -1,6 +1,6 @@
 window.onload = function () {
+  let btn = document.getElementById('jump')
   let count = 0
-
   var canvas = document.getElementById('canvas')
   var context = canvas.getContext('2d')
   var x = 300
@@ -24,7 +24,6 @@ window.onload = function () {
   function draw() {
     var timePassed = (Date.now() - t) / 1000
     t = Date.now()
-    var fps = Math.round(1 / timePassed)
 
     //clearing the canvas (очистка холста)
     context.clearRect(0, 0, 600, 400)
@@ -35,13 +34,13 @@ window.onload = function () {
     context.fillStyle = 'red'
     context.fill()
 
-    // drawing the count value (рисование значения счета)
-    context.font = '25px Arial'
+    //drawing the count value (рисование значения счета)
+    context.font = '20px Arial'
     context.fillStyle = 'white'
     context.fillText('Count: ' + count, 20, 30)
 
     if (y <= 350) {
-      speed += 50 * timePassed
+      speed += 7000 * timePassed
       y += speed * timePassed
       speed = 25
     }
